@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hanzallah Hasam - FullStack AI Engineer specializing in AI Chatbots, AI Agents, and Full Stack Development">
+    <title>Hanzallah Hasam - FullStack AI Engineer</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="font-inter bg-gray-50 text-gray-800">
+    <!-- Particle Canvas Background -->
+    <canvas id="particleCanvas" class="fixed inset-0 z-0"></canvas>
+    
+    <!-- Navigation Bar -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo/Name -->
+                <a href="#home" class="text-xl font-bold text-gray-900 hover:text-cyan-500 transition-colors">
+                    Hanzallah Hasam
+                </a>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="nav-link text-gray-700 hover:text-cyan-500 transition-colors relative">Home</a>
+                    <a href="#about" class="nav-link text-gray-700 hover:text-cyan-500 transition-colors relative">About</a>
+                    <a href="#projects" class="nav-link text-gray-700 hover:text-cyan-500 transition-colors relative">Projects</a>
+                    <a href="#testimonials" class="nav-link text-gray-700 hover:text-cyan-500 transition-colors relative">Testimonials</a>
+                    <a href="#contact" class="nav-link text-gray-700 hover:text-cyan-500 transition-colors relative">Contact</a>
+                    <a href="#contact" class="bg-gradient-to-r from-cyan-400 to-blue-500 text-white px-6 py-2 rounded-lg hover:shadow-lg hover:scale-105 transition-all duration-300">
+                        Hire Me
+                    </a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" class="md:hidden text-gray-700 hover:text-cyan-500 focus:outline-none" aria-label="Toggle menu">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white/95 backdrop-blur-md shadow-lg">
+            <div class="px-4 py-4 space-y-3">
+                <a href="#home" class="block text-gray-700 hover:text-cyan-500 py-2 transition-colors">Home</a>
+                <a href="#about" class="block text-gray-700 hover:text-cyan-500 py-2 transition-colors">About</a>
+                <a href="#projects" class="block text-gray-700 hover:text-cyan-500 py-2 transition-colors">Projects</a>
+                <a href="#testimonials" class="block text-gray-700 hover:text-cyan-500 py-2 transition-colors">Testimonials</a>
+                <a href="#contact" class="block text-gray-700 hover:text-cyan-500 py-2 transition-colors">Contact</a>
+                <a href="#contact" class="block bg-gradient-to-r from-cyan-400 to-blue-500 text-white px-6 py-2 rounded-lg text-center hover:shadow-lg transition-all duration-300">
+                    Hire Me
+                </a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Main Content -->
+    <main class="relative z-10">
+        <!-- Hero Section -->
+        <section id="home" class="min-h-screen flex items-center justify-center pt-16 px-4 relative overflow-hidden">
+            <div class="max-w-7xl mx-auto text-center">
+                <!-- Floating Decorative Orbs -->
+                <div class="floating-orb orb-1"></div>
+                <div class="floating-orb orb-2"></div>
+                <div class="floating-orb orb-3"></div>
+                
+                <div class="animate-fade-in-up">
+                    <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-4">
+                        Hi, I am <span class="text-gradient">Hanzallah Hasam</span>
+                    </h1>
+                    <p class="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto">
+                        a <span class="text-gradient font-semibold">FullStack AI Engineer</span> building the future of AI Chatbots.
+                    </p>
+                    
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mt-12">
+                        <a href="#projects" class="btn-primary">
+                            <span>View Projects</span>
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                        <a href="#contact" class="btn-secondary">
+                            <span>Get in Touch</span>
+                            <i class="fas fa-paper-plane ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- About Section -->
+        <section id="about" class="py-20 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <!-- Profile Image -->
+                    <div class="flex justify-center lg:justify-start animate-on-scroll">
+                        <div class="relative">
+                            <div class="absolute -inset-4 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full opacity-20 blur-xl"></div>
+                            <img src="assets/images/profile.jpg" alt="Hanzallah Hasam" class="relative w-64 h-64 md:w-80 md:h-80 rounded-full object-cover border-4 border-cyan-400 shadow-2xl">
+                        </div>
+                    </div>
+                    
+                    <!-- About Content -->
+                    <div class="animate-on-scroll">
+                        <h2 class="section-title">About Me</h2>
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            I'm a passionate FullStack AI Engineer with expertise in building cutting-edge AI chatbots and intelligent systems. With a strong foundation in machine learning, natural language processing, and full-stack development, I transform complex problems into elegant, scalable solutions.
+                        </p>
+                        <p class="text-gray-600 mb-8 leading-relaxed">
+                            My work spans across various domains including conversational AI, autonomous agents, and data engineering. I leverage state-of-the-art technologies to create innovative solutions that drive business value and enhance user experiences.
+                        </p>
+                        
+                        <!-- Tech Stack -->
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">Tech Stack</h3>
+                        <div class="flex flex-wrap gap-2 mb-8">
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">TensorFlow</span>
+                            <span class="tech-badge">PyTorch</span>
+                            <span class="tech-badge">LangChain</span>
+                            <span class="tech-badge">OpenAI</span>
+                            <span class="tech-badge">FastAPI</span>
+                            <span class="tech-badge">React</span>
+                            <span class="tech-badge">Node.js</span>
+                            <span class="tech-badge">Docker</span>
+                            <span class="tech-badge">AWS</span>
+                        </div>
+                        
+                        <!-- Stats -->
+                        <div class="grid grid-cols-3 gap-4">
+                            <div class="text-center p-4 bg-white rounded-lg shadow-md">
+                                <div class="text-3xl font-bold text-gradient stat-counter" data-target="50">0</div>
+                                <div class="text-sm text-gray-600 mt-1">Projects</div>
+                            </div>
+                            <div class="text-center p-4 bg-white rounded-lg shadow-md">
+                                <div class="text-3xl font-bold text-gradient stat-counter" data-target="30">0</div>
+                                <div class="text-sm text-gray-600 mt-1">Clients</div>
+                            </div>
+                            <div class="text-center p-4 bg-white rounded-lg shadow-md">
+                                <div class="text-3xl font-bold text-gradient stat-counter" data-target="5">0</div>
+                                <div class="text-sm text-gray-600 mt-1">Years Exp</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Projects Section -->
+        <section id="projects" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12 animate-on-scroll">
+                    <h2 class="section-title">Featured Projects</h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto">
+                        Explore my portfolio of innovative AI solutions and full-stack applications
+                    </p>
+                </div>
+                
+                <!-- Filter Buttons -->
+                <div class="flex flex-wrap justify-center gap-3 mb-12 animate-on-scroll">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="chatbots">Chatbots</button>
+                    <button class="filter-btn" data-filter="ai-agents">AI Agents</button>
+                    <button class="filter-btn" data-filter="nlp-tools">NLP Tools</button>
+                    <button class="filter-btn" data-filter="data-engineering">Data Engineering</button>
+                    <button class="filter-btn" data-filter="full-stack">Full Stack</button>
+                </div>
+                
+                <!-- Projects Grid -->
+                <div id="projectsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Projects will be dynamically inserted here by JavaScript -->
+                </div>
+            </div>
+        </section>
+        
+        <!-- Project Detail Modal -->
+        <div id="projectModal" class="modal hidden">
+            <div class="modal-overlay"></div>
+            <div class="modal-content">
+                <button class="modal-close" aria-label="Close modal">
+                    <i class="fas fa-times"></i>
+                </button>
+                <div id="modalBody" class="modal-body">
+                    <!-- Modal content will be dynamically inserted -->
+                </div>
+            </div>
+        </div>
+        
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="py-20 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12 animate-on-scroll">
+                    <h2 class="section-title">Client Testimonials</h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto">
+                        What clients say about working with me
+                    </p>
+                </div>
+                
+                <!-- Testimonials Container -->
+                <div class="relative">
+                    <div id="testimonialsContainer" class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <!-- Testimonial 1 -->
+                        <div class="testimonial-card animate-on-scroll">
+                            <div class="flex items-center mb-4">
+                                <img src="assets/images/client-1.jpg" alt="Client" class="w-16 h-16 rounded-full mr-4">
+                                <div>
+                                    <h4 class="font-semibold text-gray-900">Sarah Johnson</h4>
+                                    <p class="text-sm text-gray-600">CEO, TechStartup Inc.</p>
+                                </div>
+                            </div>
+                            <div class="flex mb-3">
+                                <i class="fas fa-star text-cyan-500"></i>
+                                <i class="fas fa-star text-cyan-500"></i>
+                                <i class="fas fa-star text-cyan-500"></i>
+                                <i class="fas fa-star text-cyan-500"></i>
+                                <i class="fas fa-star text-cyan-500"></i>
+                            </div>
+                            <p class="text-gray-600">
+                                "Hanzallah delivered an exceptional AI chatbot that transformed our customer support. His technical expertise and attention to detail were outstanding."
+                            </p>
+                        </div>
+                        
+                        <!-- Testimonial 2 -->
+                        <div class="testimonial-card animate-on-scroll">
+                            <div class="flex items-center mb-4">
+                                <img src="assets/images/client-2.jpg" alt="Client" class="w-16 h-16 rounded-full mr-4">
+                                <div>
+                                    <h4 class="font-semibold text-gray-900">Michael Chen</h4>
+                                    <p class="text-sm text-gray-600">CTO, DataFlow Systems</p>
+                                </div>
+                            </div>
+                            <div class="flex mb-3">
+                                <i class="fas fa-star text-cyan-500"></i>
+                                <i class="fas fa-star text-cyan-500"></i>
+                                <i class="fas fa-star text-cyan-500"></i>
+                                <i class="fas fa-star text-cyan-500"></i>
+                                <i class="fas fa-star text-cyan-500"></i>
+                            </div>
+                            <p class="text-gray-600">
+                                "Working with Hanzallah was a game-changer. He built a sophisticated data pipeline that handles millions of records with ease. Highly recommended!"
+                            </p>
+                        </div>
+                        
+                        <!-- Testimonial 3 with Video -->
+                        <div class="testimonial-card animate-on-scroll" data-video="https://www.youtube.com/embed/dQw4w9WgXcQ">
+                            <div class="flex items-center mb-4">
+                                <div class="relative">
+                                    <img src="assets/images/client-3.jpg" alt="Client" class="w-16 h-16 rounded-full mr-4">
+                                    <button class="play-video-btn absolute inset-0 flex items-center justify-center">
+                                        <i class="fas fa-play-circle text-3xl text-cyan-500 hover:text-cyan-600 transition-colors"></i>
+                                    </button>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900">Emily Rodriguez</h4>
+                                    <p class="text-sm text-gray-600">Product Manager, AI Solutions Ltd</p>
+                                </div>
+                            </div>
+                            <div class="flex mb-3">
+                                <i class="fas fa-star text-cyan-500"></i>
+                                <i class="fas fa-star text-cyan-500"></i>
+                                <i class="fas fa-star text-cyan-500"></i>
+                                <i class="fas fa-star text-cyan-500"></i>
+                                <i class="fas fa-star text-cyan-500"></i>
+                            </div>
+                            <p class="text-gray-600">
+                                "The NLP system Hanzallah developed exceeded all our expectations. His innovative approach and problem-solving skills are remarkable."
+                            </p>
+                        </div>
+                        
+                        <!-- Testimonial 4 -->
+                        <div class="testimonial-card animate-on-scroll">
+                            <div class="flex items-center mb-4">
+                                <img src="assets/images/client-4.jpg" alt="Client" class="w-16 h-16 rounded-full mr-4">
+                                <div>
+                                    <h4 class="font-semibold text-gray-900">David Kim</h4>
+                                    <p class="text-sm text-gray-600">Founder, SmartChat AI</p>
+                                </div>
+                            </div>
+                            <div class="flex mb-3">
+                                <i class="fas fa-star text-cyan-500"></i>
+                                <i class="fas fa-star text-cyan-500"></i>
+                                <i class="fas fa-star text-cyan-500"></i>
+                                <i class="fas fa-star text-cyan-500"></i>
+                                <i class="fas fa-star text-cyan-500"></i>
+                            </div>
+                            <p class="text-gray-600">
+                                "Exceptional work! Hanzallah's AI agent solution automated 80% of our manual processes. Professional, responsive, and skilled."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Video Testimonial Modal -->
+        <div id="videoModal" class="modal hidden">
+            <div class="modal-overlay"></div>
+            <div class="modal-content max-w-4xl">
+                <button class="modal-close" aria-label="Close video">
+                    <i class="fas fa-times"></i>
+                </button>
+                <div class="modal-body">
+                    <div class="aspect-video">
+                        <iframe id="videoIframe" width="100%" height="100%" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12 animate-on-scroll">
+                    <h2 class="section-title">Get in Touch</h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto">
+                        Have a project in mind? Let's work together to bring your ideas to life
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    <!-- Contact Form -->
+                    <div class="animate-on-scroll">
+                        <form id="contactForm" class="space-y-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Name</label>
+                                <input type="text" id="name" name="name" required class="form-input" placeholder="Your name">
+                            </div>
+                            
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                                <input type="email" id="email" name="email" required class="form-input" placeholder="your.email@example.com">
+                            </div>
+                            
+                            <div>
+                                <label for="subject" class="block text-sm font-medium text-gray-700 mb-2">Subject</label>
+                                <input type="text" id="subject" name="subject" required class="form-input" placeholder="Project inquiry">
+                            </div>
+                            
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+                                <textarea id="message" name="message" rows="5" required class="form-input" placeholder="Tell me about your project..."></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn-primary w-full">
+                                <span>Send Message</span>
+                                <i class="fas fa-paper-plane ml-2"></i>
+                            </button>
+                        </form>
+                        
+                        <!-- Success Message -->
+                        <div id="formSuccess" class="hidden mt-4 p-4 bg-green-50 border border-green-200 rounded-lg">
+                            <div class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                                <p class="text-green-700">Thank you! Your message has been sent successfully.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Contact Info -->
+                    <div class="animate-on-scroll">
+                        <div class="space-y-8">
+                            <div>
+                                <h3 class="text-xl font-semibold text-gray-900 mb-6">Contact Information</h3>
+                                
+                                <div class="space-y-4">
+                                    <div class="flex items-center">
+                                        <div class="w-12 h-12 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center mr-4">
+                                            <i class="fas fa-envelope text-white"></i>
+                                        </div>
+                                        <div>
+                                            <p class="text-sm text-gray-600">Email</p>
+                                            <p class="font-medium text-gray-900">hanzallah.hasam@example.com</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="flex items-center">
+                                        <div class="w-12 h-12 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center mr-4">
+                                            <i class="fas fa-map-marker-alt text-white"></i>
+                                        </div>
+                                        <div>
+                                            <p class="text-sm text-gray-600">Location</p>
+                                            <p class="font-medium text-gray-900">Available Worldwide (Remote)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <h3 class="text-xl font-semibold text-gray-900 mb-6">Find Me On</h3>
+                                
+                                <div class="space-y-4">
+                                    <a href="https://github.com/Hanzallah-Hassam" target="_blank" rel="noopener" class="social-link">
+                                        <i class="fab fa-github text-2xl"></i>
+                                        <span>GitHub</span>
+                                        <i class="fas fa-external-link-alt text-sm ml-auto"></i>
+                                    </a>
+                                    
+                                    <a href="https://www.upwork.com/freelancers/~01234567890" target="_blank" rel="noopener" class="social-link">
+                                        <i class="fas fa-briefcase text-2xl"></i>
+                                        <span>Upwork</span>
+                                        <i class="fas fa-external-link-alt text-sm ml-auto"></i>
+                                    </a>
+                                    
+                                    <a href="https://www.freelancer.com/u/hanzallahhasam" target="_blank" rel="noopener" class="social-link">
+                                        <i class="fas fa-laptop-code text-2xl"></i>
+                                        <span>Freelancer.com</span>
+                                        <i class="fas fa-external-link-alt text-sm ml-auto"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <!-- About Column -->
+                <div>
+                    <h3 class="text-white font-semibold text-lg mb-4">Hanzallah Hasam</h3>
+                    <p class="text-gray-400 text-sm">
+                        FullStack AI Engineer specializing in building innovative AI solutions and chatbots.
+                    </p>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-white font-semibold text-lg mb-4">Quick Links</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#home" class="hover:text-cyan-400 transition-colors">Home</a></li>
+                        <li><a href="#about" class="hover:text-cyan-400 transition-colors">About</a></li>
+                        <li><a href="#projects" class="hover:text-cyan-400 transition-colors">Projects</a></li>
+                        <li><a href="#testimonials" class="hover:text-cyan-400 transition-colors">Testimonials</a></li>
+                        <li><a href="#contact" class="hover:text-cyan-400 transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Social Links -->
+                <div>
+                    <h3 class="text-white font-semibold text-lg mb-4">Connect</h3>
+                    <div class="flex space-x-4">
+                        <a href="https://github.com/Hanzallah-Hassam" target="_blank" rel="noopener" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-cyan-500 transition-colors">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.upwork.com/freelancers/~01234567890" target="_blank" rel="noopener" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-cyan-500 transition-colors">
+                            <i class="fas fa-briefcase"></i>
+                        </a>
+                        <a href="https://www.freelancer.com/u/hanzallahhasam" target="_blank" rel="noopener" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-cyan-500 transition-colors">
+                            <i class="fas fa-laptop-code"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Copyright -->
+            <div class="border-t border-gray-800 pt-8 text-center text-sm">
+                <p>&copy; 2026 Hanzallah Hasam. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTop" class="scroll-to-top hidden">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    
+    <!-- JavaScript Files -->
+    <script src="js/particles.js"></script>
+    <script src="js/projects.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
