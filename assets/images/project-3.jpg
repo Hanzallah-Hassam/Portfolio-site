@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="400" viewBox="0 0 800 400">
+  <defs>
+    <linearGradient id="proj3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#06B6D4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0891B2;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="400" fill="url(#proj3)"/>
+  <polygon points="400,150 450,180 430,230 370,230 350,180" fill="white" opacity="0.2"/>
+  <text x="400" y="210" font-family="Arial, sans-serif" font-size="36" fill="white" text-anchor="middle" font-weight="bold">NLP Pipeline</text>
+  <text x="400" y="250" font-family="Arial, sans-serif" font-size="18" fill="white" text-anchor="middle" opacity="0.8">Sentiment Analysis</text>
+</svg>
